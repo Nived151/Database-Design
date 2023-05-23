@@ -1,0 +1,7 @@
+/* Find all the customers who purchased the Popular-Product. */
+
+SELECT DISTINCT CUSTOMER.customerID, CUSTOMER.fName, CUSTOMER.mName, CUSTOMER.lName
+FROM CUSTOMER
+JOIN C_ORDER ON CUSTOMER.customerID = C_ORDER.customerID
+JOIN ORDER_PRODUCT ON C_ORDER.orderID = ORDER_PRODUCT.orderID
+JOIN POPULAR_PRODUCT ON ORDER_PRODUCT.productID = POPULAR_PRODUCT.productID;

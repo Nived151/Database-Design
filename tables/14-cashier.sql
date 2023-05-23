@@ -1,0 +1,7 @@
+CREATE TABLE CASHIER (
+    employeeID INTEGER,
+    storeID INTEGER,
+    PRIMARY KEY (employeeID),
+    FOREIGN KEY (employeeID) REFERENCES EMPLOYEE(employeeID),
+    FOREIGN KEY (storeID) REFERENCES STORE(storeID)
+);

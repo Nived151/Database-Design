@@ -1,0 +1,5 @@
+CREATE TABLE MANAGER (
+    employeeID INTEGER,
+    PRIMARY KEY (employeeID),
+    FOREIGN KEY (employeeID) REFERENCES EMPLOYEE(employeeID)
+);
